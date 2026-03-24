@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Registration-form-with-Google/', 
+  envPrefix: 'VITE_',
   plugins: [react()],
 })

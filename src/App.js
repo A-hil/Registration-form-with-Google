@@ -1,0 +1,1 @@
+VITE_GOOGLE_CLIENT_ID = 697609246658-r9q0krnf978iaomv5ijrfhs3lo38i8jc.apps.googleusercontent.com
