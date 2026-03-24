@@ -1,16 +1,52 @@
-# React + Vite
+# Система авторизации с поддержкой Google OAuth 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для аутентификации пользователей с двумя способами входа: классическая регистрация (email/пароль) и вход через Google.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Возможности
 
-## React Compiler
+- ✅ **Регистрация пользователя** — создание аккаунта с email и паролем
+- ✅ **Вход в аккаунт** — аутентификация по email и паролю
+- ✅ **Вход через Google** — авторизация с использованием Google OAuth 2.0
+- ✅ **Валидация форм** — проверка полей в реальном времени
+- ✅ **Система уведомлений** — всплывающие сообщения о статусе операций
+- ✅ **Управление сессией** — хранение состояния авторизации
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Особенности реализации
+  **JWT-токены** — расшифровка и проверка срока действия токенов Google
+  **Два режима работы** — переключение между формами регистрации и входа
+  **Адаптивный дизайн** — корректное отображение на всех устройствах
+  **Мгновенная валидация** — проверка полей при вводе
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Технологии
+
+**React 18** 
+**@react-oauth/google** 
+**jwt-decode** 
+**CSS Modules** 
+**Vite** 
+
+---
+
+## 📦 Установка и запуск
+
+### Требования
+- Node.js 16+
+- npm или yarn
+- Аккаунт Google для настройки OAuth
+
+### Установка
+
+```bash
+# Клонирование репозитория
+git clone https://github.com/A-hil/Registration-form-with-Google
+cd auth-system
+
+# Установка зависимостей
+npm install
+
+# Установка дополнительных пакетов для Google OAuth
+npm install @react-oauth/google jwt-decode
