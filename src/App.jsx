@@ -138,7 +138,7 @@ const handleGoogleSuccess = (credentialResponse) => {
         <div className={styles.regsheet}>
           <form onSubmit={handleLogin}>
             <h2>Вход в аккаунт</h2>
-            <input type="email" name="email" placeholder="Email" required />
+            <input type='text' name="email" placeholder="Email" required noValidate/>
             <input type="password" name="password" placeholder="Пароль" required />
             <button type="submit">Войти</button>
             <button type="button" onClick={() => setIsLoginMode(false)}>Назад к регистрации</button>

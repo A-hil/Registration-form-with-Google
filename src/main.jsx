@@ -4,10 +4,17 @@ import './index.css'
 import App from './App.jsx'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
-const root = createRoot(document.getElementById('root'));
+const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID
 
-root.render(
-  <GoogleOAuthProvider clientId="697609246658-r9q0krnf978iaomv5ijrfhs3lo38i8jc.apps.googleusercontent.com">
-    <App />
-  </GoogleOAuthProvider>
+if (!GOOGLE_CLIENT_ID) {
+  console.error('GOOGLE_CLIENT_ID не найден в .env файле!')
+}
+
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+      <App />
+    </GoogleOAuthProvider>
+  </StrictMode>,
 );
